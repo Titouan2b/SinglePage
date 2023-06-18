@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,20 +9,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <title>Matthieu Rech</title>
 </head>
 <body>
-    <div class="circle1"></div>
-    <div class="circle2"></div>
-    <div class="circle3"></div>
-    <div class="circle4"></div>
-    <div class="circle5"></div>
-    <div class="circle6"></div>
-    <div class="circle7"></div>
-    <div class="circle8"></div>
-    <div class="circle9"></div>
-    <div class="circle10"></div>
-    <div class="circle11"></div>
+    <div class="circle">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <div class="circle5"></div>
+        <div class="circle6"></div>
+        <div class="circle7"></div>
+        <div class="circle8"></div>
+        <div class="circle9"></div>
+        <div class="circle10"></div>
+        <div class="circle11"></div>
+    </div>
     <header id="reback">
         <input type="checkbox" id="menu" name="menu"/>
             <div id="menu-deroulant">
@@ -103,23 +106,23 @@
             <section class="projets" id="projets">
                 <h2>MES PROJETS</h2>
                 <div class="wrap">
-                        <div class="image1">
-                            <img src="image/Ynak mosaique (1).jpg" alt="">
+                        <div class="image1" id="img1">
+                            <img src="image/slideshow/Ynak mosaique (1).jpg" alt="">
                         </div>
-                        <div class="image2">
-                            <img src="image/Post-Kushy1.jpg" alt="">
+                        <div class="image2" id="img2">
+                            <img src="image/slideshow/Post-Kushy1.jpg" alt="">
                         </div>
-                        <div class="image2">
-                            <img src="image/NFT-Diablo.jpg" alt="">
+                        <div class="image2" id="img3">
+                            <img src="image/slideshow/NFT-Diablo.jpg" alt="">
                         </div>
-                        <div class="image1">
-                            <img src="image/Cover-DIABLO.jpg" alt="">
+                        <div class="image1" id="img4">
+                            <img src="image/slideshow/Cover-DIABLO.jpg" alt="">
                         </div>
-                        <div class="image1">
-                            <img src="image/Matthieu Rech Illustration.jpg" alt="">
+                        <div class="image1" id="img5">
+                            <img src="image/slideshow/Matthieu Rech Illustration.jpg" alt="">
                         </div>
-                        <div class="image2">
-                            <img src="image/Affiche-Alex-V13.jpg" alt="">
+                        <div class="image2" id="img6">
+                            <img src="image/slideshow/Affiche-Alex-V13.jpg" alt="">
                         </div>
                 </div>
                 <button class="voirplus">VOIR PLUS</button>
@@ -127,17 +130,21 @@
             <section class="exp" id="exp">
                 <h2>EXPERIENCE <br>PROFESSIONNELLE</h2>
                 <div class="wrap">
-                    <div class="exp-desc">
-                        <img src="image/Logo-Goodbarber-Freelance-Stack.jpg" alt="">
+                    <div id="retourner-block" class="exp-desc image">
+                        <img id="retourner" src="image/Logo-Goodbarber-Freelance-Stack.jpg" alt="">
+                        <div id="cache"><p>Stage app building</p></div>
                     </div>
-                    <div class="exp-desc">
-                        <img src="image/logo photographie.png" alt="">
+                    <div id="retourner-block" class="exp-desc image">
+                        <img id="retourner" src="image/logo photographie.png" alt="">
+                        <div id="cache"><p>Stage photo</p></div>
                     </div>
-                    <div class="exp-desc">
-                        <img src="image/logo campus plex.png" alt="">
+                    <div id="retourner-block" class="exp-desc image">
+                        <img id="retourner" src="image/logo campus plex.png" alt="">
+                        <div id="cache"><p>Stage app building</p></div>
                     </div>
-                    <div class="exp-desc">
-                        <img src="image/logo (1).jpg" alt="">
+                    <div id="retourner-block" class="exp-desc image">
+                        <img id="retourner" src="image/logo (1).jpg" alt="">
+                        <div id="cache"><p>Alternance design numérique</p></div>
                     </div>
                 </div>
             </section>
@@ -147,8 +154,8 @@
                     <div class="cv-container-img">
                         <img src="image/cv.PNG" alt="">
                     </div>
-                    <form method="get" action="image/CV-Matthieu_Rech.pdf">
-                        <button type="submit">TELECHARGER</button>
+                    <form method="get" target="_blank" action="image/CV-Matthieu_Rech.pdf">
+                        <button type="submit"><p>TELECHARGER</p></button>
                     </form>
                 </div>
             </section>
@@ -164,13 +171,37 @@
     <footer id="contact">
         <h2>ME CONTACTER</h2>
         <div class="rs">
-            <i class="fa-regular fa-envelope"></i>
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-linkedin-in"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-instagram"></i>
+            <a href="mailto:matthieurech2b@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.facebook.com/Matthieusr" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/matthieu-simoni-rech-093635248/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/MatthieuMatt7" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.instagram.com/matthieu_rech/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
         <p>all right reserved</p>
     </footer>
+    <div class="overlay hidden">
+        <div class="modal-container">
+            <div class="modify-gallery">
+                <h2>MES PROJETS</h2>
+                <i class="fa-solid fa-xmark absolute"></i>
+                <div class="carousel">
+                    <i class="fa-solid fa-arrow-left arrow-slide arrow_left"></i>
+                    <i class="fa-solid fa-arrow-right arrow-slide arrow_right"></i>
+                    <div id="banner">
+                        <img class="banner-img" src="image/slideshow/Ynak mosaique (1).jpg" alt="">
+                    </div>
+                    <div class="projet-text">
+                        <p id="banner-txt">le texte du projet 1</p>
+                    </div>
+                    <div class="dots">
+                    </div>
+                </div>
+                <div class="circle12"></div>
+                <div class="circle13"></div>
+                <div class="circle14"></div>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="js/script.js"></script>
 </html>
