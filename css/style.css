@@ -4,6 +4,10 @@
 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 
 :root{
     --color-main: #303030;
@@ -31,11 +35,6 @@ body{
     background: var(--color-main);
     
 }
-
-
-
-
-
 
 
 .circle1{
@@ -586,7 +585,6 @@ label > span {
   bottom: 0;
   right: 0;
   left: 0;
-
   z-index: 0;
   transition: 500ms ease-in-out;
   background-color: var(--color-main);
@@ -595,8 +593,9 @@ label > span {
 #cache p {
   color: white;
   position: absolute;
-  top: 50px;
-  right: 50px;
+  top: 140px;
+  right: 0;
+  left: 0;
   transform: rotateY(180deg);
 }
 
@@ -631,6 +630,17 @@ label > span {
     background-color: var(--color-main);
     border-radius: 177px;
     border: 1px solid var(--color-main);
+}
+
+
+.cv-container button:hover{
+    background-color: var(--color-hover);
+    transition: ease-in-out 400ms;
+}
+
+.cv-container button:hover p{
+    transition: ease-in-out 400ms;
+    color: #000000;
 }
 
 

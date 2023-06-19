@@ -200,3 +200,14 @@ function updateCarousel() {
   }
   window.addEventListener("scroll", effet);
 })();
+
+const up = document.querySelector('.arrow');
+
+up.addEventListener('click', () => {
+
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth"
+  })
+})
