@@ -13,7 +13,7 @@ const slides = [
         "tagLine":"le texte du projet 3"
     },
     {
-        "image":"Cover-Diablo.jpg",
+        "image":"Cover-DIABLO.jpg",
         "tagLine":"le texte du projet 4"
     },
     {
