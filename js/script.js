@@ -2,51 +2,51 @@ const buttonSlide = document.querySelector(".voirplus")
 const slides = [
     {
         "image":"Ynak mosaique (1).jpg",
-        "tagLine":"le texte du projet 1"
+        "tagLine":"Cette image a été réalisé pour le projet de fin d'année de mon DUT MMI. Elle a été conçue pour être utilisée comme mosaïque sur le compte instagram de notre projet (@YnakProd)"
     },
     {
         "image":"Post-Kushy1.jpg",
-        "tagLine":"le texte du projet 2"
+        "tagLine":"Cette image a été réalisé pour le projet de fin d'année de mon DUT MMI. Elle a été conçue pour être utilisée comme cover de single pour notre projet musical."
     },
     {
         "image":"NFT-Diablo.jpg",
-        "tagLine":"le texte du projet 3"
+        "tagLine":"Cette image a été réalisé pour le projet de fin d'année de mon DUT MMI. Elle a été conçue pour être utilisée comme NTF pour faire grimper l'engouement autour de notre projet musical."
     },
     {
         "image":"Cover-DIABLO.jpg",
-        "tagLine":"le texte du projet 4"
+        "tagLine":"Cette image a été réalisé pour le projet de fin d'année de mon DUT MMI. Elle a été conçue pour être utilisée comme cover de single pour notre projet musical, c'est une photo réalisée en studio puis montée sur photoshop."
     },
     {
         "image":"Matthieu Rech Illustration.jpg",
-        "tagLine":"le texte du projet 5"
+        "tagLine":"Cette image a été réalisé en cours de \"Matte Painting\" durant ma licence pro métier du design. Il m'a été imposé de creer un univers graphique mettant en scène un produit et ce seulement en éffectuant un photomontage."
     },
     {
         "image":"Affiche-Alex-V13.jpg",
-        "tagLine":"le texte du projet 6"
+        "tagLine":"Cette image a été réalisé pour le projet de fin d'année de mon DUT MMI. Elle a été conçue pour être utilisée comme teaser pour alimenter les réseaux sociaux du groupe de projet."
     },
     {
         "image":"Capture1.PNG",
-        "tagLine":"le texte du projet 7"
+        "tagLine":"Cette image a été réalisé en cours de \"Matte Painting\" durant ma licence pro métier du design. Ici, nous devions, à l'aide d'un tablette graphique et du logiciel Photoshop, créer un dessin et le texturer."
     },
     {
         "image":"capture2.PNG",
-        "tagLine":"le texte du projet 8"
+        "tagLine":"Cette image a été réalisé en cours de \"Character Design\" durant ma licence pro métier du design. Ici, nous devions, à l'aide d'un tablette graphique et du logiciel Photoshop, créer un personnage de dessin animé adapté au enfants en suivant méthodiquement les étapes de vignettage et de colorisation."
     },
     {
         "image":"gtr.png",
-        "tagLine":"le texte du projet 9"
+        "tagLine":"J'ai réalisé cette image lorsque j'ai découvert \"Midjourney\", une intelligence artificielle qui vise à créer des images à partir d'un prompt que vous lui fournisez. Ici, j'ai adresser une requete pour avoir une image de nissan gtr sous la pluie. J'ai par la suite édité et créer des lumières et couleurs dans photoshop pour atteindre ce resultat."
     },
     {
         "image":"Matthieu Rech 2.jpg",
-        "tagLine":"le texte du projet 10"
+        "tagLine":""
     },
     {
         "image":"white tiger ai.png",
-        "tagLine":"le texte du projet 11"
+        "tagLine":"J'ai réalisé cette image lorsque j'ai découvert \"Midjourney\", une intelligence artificielle qui vise à créer des images à partir d'un prompt que vous lui fournisez. Ici, j'ai adresser une requete pour avoir une image de tigre vêtu d'une armure dorée. J'ai par la suite édité et créer des lumières et couleurs dans photoshop pour atteindre ce resultat."
     },
     {
         "image":"Capture.PNG",
-        "tagLine":"le texte du projet 12"
+        "tagLine":"Cette image a été réalisé en cours de \"Stratégie de communication\" durant ma licence pro métier du design. Ici, nous devions, créer une direction artistique de zéro pour un produit et ensuite créer tous les visuels pour une potentielle entrée sur le marché."
     },
 ]
 const displayFirstModal = document.querySelector(".overlay")
@@ -112,40 +112,91 @@ function loop(dotsArray) {
 
 loop(dotsArray)
 
-const carousel = document.querySelector(".carousel")
-let isDragging = false
-let startPos = 0
-let currentTranslate = 0
-let prevTranslate = 0
-
-banner.addEventListener('touchstart', touchStart)
-banner.addEventListener('touchmove', touchMove)
-banner.addEventListener('touchend', touchEnd)
-
-
-function touchStart(event) {
-    startPos = event.touches[0].clientX;
-    isDragging = true;
-}
-
-touchStart()
-
-function touchMove(event) {
-    if (!isDragging) return;
-    const currentPosition = event.touches[0].clientX;
-    currentTranslate = prevTranslate + currentPosition - startPos;
-}
-
-touchMove()
-
-function touchEnd() {
-    isDragging = false;
-    prevTranslate = currentTranslate;
-}
-
-touchEnd()
-
 function updateCarousel() {
     banner.style.transform = `translateX(${currentTranslate}px)`;
+}
+
+(function() {
+  var fig = document.querySelectorAll(".circle-web")[0];
+  var posImg = fig.offsetTop;
+  function effet(){
+    var posCurseur = this.pageYOffset;
+    if(posImg-posCurseur<5){
+      fig.style.top = "150px";
+    }else{
+      fig.style.top = "340px";
+    }
   }
-  
+  window.addEventListener("scroll", effet);
+})();
+
+
+(function() {
+  var fig = document.querySelectorAll(".circle-illu")[0];
+  var posImg = fig.offsetTop;
+  function effet(){
+    var posCurseur = this.pageYOffset;
+    if(posImg-posCurseur<300){
+      fig.style.top = "75px";
+    }else{
+      fig.style.top = "340px";
+    }
+  }
+  window.addEventListener("scroll", effet);
+})();
+
+(function() {
+  var fig = document.querySelectorAll(".circle-photo")[0];
+  var posImg = fig.offsetTop;
+  function effet(){
+    var posCurseur = this.pageYOffset;
+    if(posImg-posCurseur<50){
+      fig.style.top = "75px";
+    }else{
+      fig.style.top = "340px";
+    }
+  }
+  window.addEventListener("scroll", effet);
+})();
+
+(function() {
+  var fig = document.querySelectorAll(".circle-page")[0];
+  var posImg = fig.offsetTop;
+  function effet(){
+    var posCurseur = this.pageYOffset;
+    if(posImg-posCurseur<50){
+      fig.style.top = "30px";
+    }else{
+      fig.style.top = "340px";
+    }
+  }
+  window.addEventListener("scroll", effet);
+})();
+
+(function() {
+  var fig = document.querySelectorAll(".circle-video")[0];
+  var posImg = fig.offsetTop;
+  function effet(){
+    var posCurseur = this.pageYOffset;
+    if(posImg-posCurseur<50){
+      fig.style.top = "75px";
+    }else{
+      fig.style.top = "340px";
+    }
+  }
+  window.addEventListener("scroll", effet);
+})();
+
+(function() {
+  var fig = document.querySelectorAll(".circle-maquette")[0];
+  var posImg = fig.offsetTop;
+  function effet(){
+    var posCurseur = this.pageYOffset;
+    if(posImg-posCurseur<50){
+      fig.style.top = "30px";
+    }else{
+      fig.style.top = "340px";
+    }
+  }
+  window.addEventListener("scroll", effet);
+})();
