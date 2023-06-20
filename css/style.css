@@ -377,6 +377,9 @@ label > span {
     margin-top: 30px;
 }
 
+.column-progress{
+    display: none;
+}
 
 .bar{
     height: 365px;
@@ -797,27 +800,17 @@ footer h2{
 	font-size: 24px;
 }
 
-#banner {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+
+
+.banner {
     height: 350px;
     margin-top: 20px;
 }
 
-.carousel{
-    display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-    position: relative;
-}
+
 
 .banner-img {
 	width: 100%;
-	height: 100%;
-    object-fit: cover;
-	object-position: center;
 }
 
 .projet-text{
@@ -859,6 +852,12 @@ footer h2{
 .dot_selected {
 	background-color: #fff;
 }
+
+.item{
+    height: 600px;
+}
+
+
 
 .hidden{
     display: none;

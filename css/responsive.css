@@ -45,7 +45,30 @@
         top: 10px;
         right: 10px;
     }
+
+    .modal-container{
+        height: 700px;
+    }
+
+    .banner-img{
+        object-fit: cover;
+    }
+
+    .circle12{
+        display: none;
+    }
+
+    .circle13{
+        display: none;
+    }
+
+    .circle14{
+        display: none;
+    }
+
+
 }
+
 
 @media screen and (max-width: 768px) {
     .circle{
@@ -53,14 +76,74 @@
     }
 
     .comp-container{
-        width: 95vw;
-        gap: 8%;
+        display: none;
     }
 
-    .column{
-        margin-top: 40px;
+    .row{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .column-progress{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .progress-container{
+        background-color: white;
+        color: white;
+        border-radius: 15px;
+        width: 300px;
+        
+    }
+
+    .progress{
+        font-family: 'Inter', sans-serif;
+        background-color: var(--color-footer);
+        color: white;
+        padding: 5px;
+        text-align: right;
+        border-radius: 15px;
+    }
+
+    @keyframes progressAnimationWeb{
+        from { width: 0;}
+        to { width: 50%;}
+    }
+
+    @keyframes progressAnimationIllu{
+        from { width: 0;}
+        to { width: 75%;}
+    }
+
+    @keyframes progressAnimationPhoto{
+        from { width: 0;}
+        to { width: 90%;}
+    }
+
+    .Web{
+        width: 50%;
+        animation: progressAnimationWeb 2s;
     }
     
+    .illu{
+        width: 75%;
+        animation: progressAnimationIllu 2s;
+    }
+
+    .photo{
+        width: 90%;
+        animation: progressAnimationPhoto 2s;
+    }
+
     .bar{
         height: 40vh;
     }
@@ -102,5 +185,10 @@
     .absolute{
         top: 5px;
         right: 5px;
+    }
+
+    .modal-container{
+        width: 40%;
+        height: 650px;
     }
 }
