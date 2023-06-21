@@ -26,7 +26,6 @@ closeModal.addEventListener("click", (event) =>{
   window.addEventListener("scroll", effet);
 })();
 
-
 (function() {
   var fig = document.querySelectorAll(".circle-illu")[0];
   var posImg = fig.offsetTop;
