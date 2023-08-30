@@ -1,16 +1,30 @@
 const buttonSlide = document.querySelector(".voirplus")
-const displayFirstModal = document.querySelector(".overlay")
-const closeModal = document.querySelector(".absolute")
+const displayOverlay = document.querySelector(".overlay")
+const displayGallery = document.querySelector(".modal-container")
+const displayForm = document.querySelector(".modal-form")
+const closeModalGallery = document.querySelector(".absolute")
+const closeModalForm = document.querySelector(".close")
+const form = document.querySelector(".content-form")
 
 buttonSlide.addEventListener("click", (event) =>{
-    displayFirstModal.classList.toggle("hidden")
+    displayOverlay.classList.toggle("hidden")
+    displayGallery.classList.toggle("hidden")
 });
 
-closeModal.addEventListener("click", (event) =>{
-    displayFirstModal.classList.toggle("hidden")
+form.addEventListener("click", (event) =>{
+    displayOverlay.classList.toggle("hidden")
+    displayForm.classList.toggle("hidden")
 });
 
+closeModalGallery.addEventListener("click", (event) =>{
+    displayOverlay.classList.toggle("hidden")
+    displayGallery.classList.toggle("hidden")
+});
 
+closeModalForm.addEventListener("click", (event) =>{
+    displayOverlay.classList.toggle("hidden")
+    displayForm.classList.toggle("hidden")
+});
 
 (function() {
   var fig = document.querySelectorAll(".circle-web")[0];
